@@ -13,6 +13,7 @@
 			<div class="col py-5">
 				<h1 class="fw-bold">{{ $project['title'] }}</h1>
 				<p>{{ $project['content'] }}</p>
+				<div><h5 class="fw-bold d-inline">Linguaggio</h5>: {{ $project->type ? $project->type->name : 'nessun linguaggio' }}</div>
 			</div>
 		</div>
 	</div>

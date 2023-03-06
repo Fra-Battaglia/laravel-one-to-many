@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Type extends Model
 {
+    protected $guarded = [];
     use HasFactory;
+
+    public function project() {
+        return $this->hasMany(Project::class);
+    }
 }

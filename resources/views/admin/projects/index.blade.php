@@ -18,6 +18,7 @@
 								<th>ID</th>
 								<th>Title</th>
 								<th>Content</th>
+								<th>Linguaggio</th>
 								<th>Slug</th>
 							</tr>
 						</thead>
@@ -27,6 +28,7 @@
 									<td class="px-3">{{ $item['id'] }}</td>
 									<td>{{ $item['title'] }}</td>
 									<td>{{ $item['content'] }}</td>
+									<td>{{ $item->type ? $item->type->name : 'nessun linguaggio' }}</td>
 									<td>{{ $item['slug'] }}</td>
 									<td><a href="{{ route('admin.projects.edit', $item) }}" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a></td>
 									<td><a href="{{ route('admin.projects.show', $item->slug) }}" class="btn btn-info"><i class="fa-solid fa-eye"></i></a></td>
